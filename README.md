@@ -11,17 +11,17 @@
 Menambahkan 1 fitur baru kedalam program Transportation Reservation System yang sudah ada.
 
 ## # Solusi
-Fitur baru yang dibuat adalah voucher bagi user. Kami membuat tabel baru (```voucher```) yang memiliki relasi *Many to One* terhadap tabel ```user``` yang telah ada. Skema tabel baru adalah sebagai berikut:
+Fitur baru yang dibuat adalah voucher untuk user yang diinputkan oleh admin. Kami membuat tabel baru (```voucher```) yang memiliki relasi *Many to One* terhadap tabel ```user``` yang telah ada. Skema tabel baru adalah sebagai berikut:
 
 ![new_table_voucher](https://user-images.githubusercontent.com/38347258/210246200-48937c27-687b-4936-97c0-2721b66236f5.png)
 
 ### ## Operasi yang dapat dilakukan :
-* ```getAll()``` => Menampilkan semua voucher yang ada
-* ```addVoucher()``` => Menambahkan voucher baru
+* ```getAll()``` => Menampilkan semua voucher yang telah diinputkan admin
+* ```addVoucher()``` => Menambahkan voucher baru oleh admin
 * ```getVoucherByOwner()``` => Menampilkan semua voucher yang dimiliki oleh user tertentu
-* ```deleteVoucher()``` => Menghapus voucher
-* ```getVoucherById()``` => Menampilkan voucher berdasarkan voucher id
-* ```updateVoucher()``` => Memperbaharui voucher
+* ```deleteVoucher()``` => Menghapus voucher oleh admin
+* ```getVoucherById()``` => Menampilkan voucher berdasarkan voucher id admin
+* ```updateVoucher()``` => Memperbaharui voucher oleh admin
 
 ## # Hasil Run Program
 Testing menggunakan swagger 2, dan dapat diakses melalui link : [http://localhost:8080/swagger-ui.html#/](http://localhost:8080/swagger-ui.html#/)
@@ -45,3 +45,6 @@ Berikut ini hasil testing terhadap setiap use cash fitur voucher:
 
 ### ## updateVoucher()
 ![updateVoucher](https://user-images.githubusercontent.com/38347258/210255082-02814eb1-aee0-4142-a237-d5cbed6e8afc.png)
+
+# # Link Github
+https://github.com/taufikfathurahman/hactiv8-finalproject-java
