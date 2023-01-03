@@ -23,4 +23,16 @@ public class FinalProjectApplication extends SpringBootServletInitializer {
 	public static void main(String[] args) {
 		SpringApplication.run(FinalProjectApplication.class, args);
 	}
+	
+	@Bean
+	public Docket postsApi() {
+		return new Docket(DocumentationType.SWAGGER_2)
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("com.example.finalproject.controller"))
+				.build().securitySchemes(Arrays.asList(apiKey()));
+	}
+
+    private ApiKey apiKey() {
+        return new ApiKey("apiKey", "Authorization", "header");
+    }
 }
